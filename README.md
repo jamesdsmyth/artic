@@ -36,8 +36,7 @@ An iOS & Android app for MUAs & hair stylists looking to advertise their trade o
   * Outline reuseable components and match npm packages for these
 * Phase 2
   * Install React Native, Jest and any other dependancy library
-  * Add initial build of structure with navigational package
-  * Install Jest and set up the test runner
+  * Add base main menu global wrapper and navigational package
 
 ### Sitemap
 * Views
