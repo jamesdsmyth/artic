@@ -31,5 +31,8 @@ An iOS & Android app for MUA & hair stylists looking to advertise their trade on
 ### Roadmap
 * Phase 1
   * Full sitemap with components of each view
+  * Design and draw out a basic app of each page and state
   * Outline reuseable components and match npm packages for these
-  * Install React Native, jest and any other dependancy library
+* Phase 2
+  * Install React Native, Jest and any other dependancy library
+  * Add initial build of structure with navigational package
