@@ -15,7 +15,7 @@ An iOS & Android app for MUA & hair stylists looking to advertise their trade on
 * Use a booking form to book a MUA and pay through the app
 
 ### Branches
-artic/initial-build
+* artic/initial-build
 
 ### Packages to use
 * For all elements - https://github.com/GeekyAnts/NativeBase
@@ -27,3 +27,9 @@ artic/initial-build
 * Pushing updated code to iOS store without bringing down the app - https://github.com/Microsoft/react-native-code-push
 * Jest testing - https://github.com/facebook/jest
 * Payment gateway in UAE - https://docs.start.payfort.com/
+
+### Roadmap
+* Phase 1
+  * Full sitemap with components of each view
+  * Outline reuseable components and match npm packages for these
+  * Install React Native, jest and any other dependancy library
