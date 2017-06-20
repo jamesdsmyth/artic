@@ -46,23 +46,35 @@ An iOS & Android app for MUAs & hair stylists looking to advertise their trade o
     * Name
     * Gender
     * Location
+    * Description 140 characters
     * List of photos
     * Type of make up (Western/Arabic/Asian/African)
     * Availability (reusable component)
     * Request booking section
       * Date picker (reusable component)
       * Input boxes (reusable component)
+  * MUA photo
+    * Photo
+    * Description 140 characters
   * Client (2/2)
     * Name
     * Gender
     * Location
+    * Description 140 characters
     * Photo (optional)
+  * Create
+    * Name
+    * Location
+    * Description
+    * Upload thumbnail
+    * upload photos (if MUA)
+    * type of makeup (if MUA)
   * Search
     * Tabs - People/Style/Location
     * Results - Thumbnail list of MUAs (reusable component)
   * Sign in
     * username/password login
-    * username/password signup
+    * username/password signup clicking takes you to Create view
   * Messages
     * List of messages
   * Message - messages using the Firebase app
@@ -73,6 +85,7 @@ An iOS & Android app for MUAs & hair stylists looking to advertise their trade o
   * Profile button - opens up your MUA or Sign in view
 
 ### Components
+* Top menu and back button
 * Bottom menu
 * Thumbnail list of MUAs (order should be random at the moment)
 * Availability

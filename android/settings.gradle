@@ -1,0 +1,3 @@
+rootProject.name = 'artic'
+
+include ':app'
