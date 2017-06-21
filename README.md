@@ -16,6 +16,7 @@ An iOS & Android app for MUAs & hair stylists looking to advertise their trade o
 
 ### Branches
 * artic/initial-build
+* artic/navigation
 
 ### Packages to use
 * For all elements - https://github.com/GeekyAnts/NativeBase
