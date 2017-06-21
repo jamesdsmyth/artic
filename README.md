@@ -92,3 +92,6 @@ An iOS & Android app for MUAs & hair stylists looking to advertise their trade o
 * Button
 * Date picker
 * Inputs
+
+### Android to dos
+* Main navigation install for Android - https://wix.github.io/react-native-navigation/#/installation-android

@@ -22,9 +22,6 @@ export default class HeaderArtic extends Component {
           <Title>Artic</Title>
         </Body>
         <Right>
-          <Button transparent>
-              <Icon name='menu' />
-          </Button>
         </Right>
       </Header>
     )

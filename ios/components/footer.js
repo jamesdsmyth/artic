@@ -14,13 +14,13 @@ export default class FooterArtic extends Component {
       <Footer>
         <FooterTab>
           <Button>
-            <Icon name="apps" />
+            <Icon name="home" />
           </Button>
           <Button>
-            <Icon name="camera" />
+            <Icon name="search" />
           </Button>
           <Button active>
-            <Icon active name="navigate" />
+            <Icon active name="chatbubbles" />
           </Button>
           <Button>
             <Icon name="person" />
