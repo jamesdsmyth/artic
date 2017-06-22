@@ -1,12 +1,6 @@
 import React, { Component } from 'react';
 import { 
-  Button,
-  Icon,
-  Header,
-  Left,
-  Right,
-  Body,
-  Title
+  Icon
 } from 'native-base';
 
 import HeaderArtic from '../components/header';
