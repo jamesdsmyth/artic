@@ -4,6 +4,8 @@ import {
   Icon
 } from 'native-base';
 
+import HeaderArtic from '../components/header';
+
 export default class ArticMessages extends Component {
   static navigationOptions = {
     tabBarIcon: ({ tintColor }) => (
@@ -15,10 +17,7 @@ export default class ArticMessages extends Component {
 
   render() {
     return (
-      <Button
-        onPress={() => this.props.navigation.goBack()}
-        title='Go back home'
-      />
+      <HeaderArtic title="Messages" />
     )
   }
 }

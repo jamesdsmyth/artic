@@ -1,8 +1,15 @@
 import React, { Component } from 'react';
-import { Button } from 'react-native';
 import { 
-  Icon
+  Button,
+  Icon,
+  Header,
+  Left,
+  Right,
+  Body,
+  Title
 } from 'native-base';
+
+import HeaderArtic from '../components/header';
 
 export default class ArticLanding extends Component {
   static navigationOptions = {
@@ -15,10 +22,7 @@ export default class ArticLanding extends Component {
 
   render() {
     return (
-      <Button
-        onPress={() => this.props.navigation.navigate('Messages')}
-        title='Go to Messages'
-      />
+      <HeaderArtic title="Artic" />
     )
   }
 }
