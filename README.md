@@ -17,6 +17,7 @@ An iOS & Android app for MUAs & hair stylists looking to advertise their trade o
 ### Branches
 * artic/initial-build
 * artic/navigation
+* artic/state
 
 ### Packages to use
 * For all elements - https://github.com/GeekyAnts/NativeBase
@@ -38,6 +39,7 @@ An iOS & Android app for MUAs & hair stylists looking to advertise their trade o
 * Phase 2
   * Install React Native, Jest and any other dependancy library
   * Add base main menu global wrapper and navigational package
+  * Redux needs to be added alongside Firebase for the data management - IN PROGRESS
 
 ### Sitemap
 * Views
