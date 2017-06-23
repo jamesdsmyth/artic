@@ -1,16 +1,4 @@
-// import { AppRegistry } from 'react-native';
-// import articApp from './ios/config/navigation';
-
-// AppRegistry.registerComponent('artic', () => articApp);
-
-
-
-
-/**
- * @flow
- */
-
-import React from 'react';
+import React, { Component } from 'react';
 import { AppRegistry } from 'react-native';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
@@ -18,7 +6,7 @@ import { createStore } from 'redux';
 import AppReducer from './src/reducers';
 import AppWithNavigationState from './src/navigators/appNavigator';
 
-class artic extends React.Component {
+class artic extends Component {
   store = createStore(AppReducer);
 
   render() {

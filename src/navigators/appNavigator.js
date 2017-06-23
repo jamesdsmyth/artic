@@ -3,12 +3,8 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { addNavigationHelpers, TabNavigator } from 'react-navigation';
 
-// import LoginScreen from '../components/LoginScreen';
-// import MainScreen from '../components/MainScreen';
-// import ProfileScreen from '../components/ProfileScreen';
-
-import ArticLanding from '../../ios/scenes/landing';
-import ArticMessages from '../../ios/scenes/messages';
+import ArticLanding from '../scenes/landing';
+import ArticMessages from '../scenes/messages';
 
 export const AppNavigator = TabNavigator({
   Home: {
