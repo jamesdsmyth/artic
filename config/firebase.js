@@ -4,10 +4,9 @@ let firebaseApp = null;
 let storage = null;
 let itemsRef = null;
 
+// Initializing Firebase
 export default function initialiseFirebase() {
-  // Initialize Firebase
-
-  var config = {
+  const config = {
     apiKey: "AIzaSyB17xiF8n_5Drgzs1qkYKUu8L4MpVTRQpc",
     authDomain: "artic-58dd6.firebaseapp.com",
     databaseURL: "https://artic-58dd6.firebaseio.com",
@@ -21,33 +20,15 @@ export default function initialiseFirebase() {
   itemsRef = firebaseApp.database().ref('users');
 
   itemsRef.on('value', (snapshot) => {
-    let newSnapshot = null;
-
-    setTimeout(() => {
-      newSnapshot = snapshot.val() || [];
-      console.log(newSnapshot);
-    }, 0);
-
-    // console.log('the new snapshot is', newSnapshot);
-
-    // var items = [];
+    let newSnapshot = snapshot.val() || [];
+    let itemArray = [];
+    
     for (item in newSnapshot) {
       let arrayItem = newSnapshot[item];
-
-      console.log(arrayItem);
-
-    //   items.push({
-    //     mealId: item,
-    //     mealName: meal.mealName,
-    //     mealPriceAED: meal.mealPriceAED,
-    //     chefId: meal.chefId,
-    //     cuisineType: meal.cuisineType,
-    //     description: meal.description,
-    //     photo: meal.photo,
-    //     photoUrl: meal.photoUrl,
-    //     portionsAvailable: meal.portionsAvailable,
-    //   });
+      itemArray.push(arrayItem);
     }
+
+    console.log(itemArray);
 
     // store.dispatch(actions.populateMeals(items));
   });
