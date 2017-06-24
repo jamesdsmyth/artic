@@ -1,16 +1,27 @@
-import React from 'react';
-import { 
+import React, { Component } from 'react';
+import {
+  connectStyle,
   Header,
   Body,
   Title
 } from 'native-base';
 
-const HeaderArtic = ({ title }) => (
-  <Header>
-    <Body>
-      <Title>{title}</Title>
-    </Body>
-  </Header>
-)
+import stylesArtic from '../styles/styles';
 
-export default HeaderArtic;
+class HeaderArtic extends Component {
+  render() {
+    const styles = this.props.style;
+    const title = this.props.title;
+
+    return (
+      <Header style={stylesArtic.headerArtic}>
+        <Body>
+          <Title>{title}</Title>
+        </Body>
+      </Header>
+    )
+  }
+}
+
+// connect the component to the theme
+export default connectStyle('artic.CustomComponent', stylesArtic)(HeaderArtic);
