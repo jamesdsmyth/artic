@@ -2,7 +2,7 @@ const stylesArtic = {
   listItemArtic: {
     "imageArtic": {
       flex: 1,
-      height: 100,
+      height: 300,
       alignSelf: 'stretch'
     }
   },

@@ -30,15 +30,7 @@ const ListItemArtic = ({ item }) => (
         <Image style={stylesArtic.listItemArtic.imageArtic} source={require('../images/cat.jpg')}/>
       </CardItem>
       <CardItem>
-        <Button transparent>
-          <Icon active name="thumbs-up" />
-          <Text>12 Likes</Text>
-        </Button>
-        <Button transparent>
-          <Icon active name="chatbubbles" />
-          <Text>4 Comments</Text>
-        </Button>
-        <Text>11h ago</Text>
+        <Text note>Arab / Asian / Western</Text>
       </CardItem>
     </Card>
   </ListItem>
