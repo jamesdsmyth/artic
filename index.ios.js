@@ -6,6 +6,10 @@ import { createStore } from 'redux';
 import AppReducer from './src/reducers';
 import AppWithNavigationState from './src/navigators/appNavigator';
 
+import initialiseFirebase from './config/firebase';
+
+initialiseFirebase();
+
 class artic extends Component {
   store = createStore(AppReducer);
 
