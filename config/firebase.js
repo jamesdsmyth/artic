@@ -1,5 +1,5 @@
 import firebase from 'firebase';
-
+import store from '../src/reducers/index';
 let firebaseApp = null;
 let storage = null;
 let itemsRef = null;
@@ -22,7 +22,7 @@ export default function initialiseFirebase() {
   itemsRef.on('value', (snapshot) => {
     let newSnapshot = snapshot.val() || [];
     let itemArray = [];
-    
+
     for (item in newSnapshot) {
       let arrayItem = newSnapshot[item];
       itemArray.push(arrayItem);
@@ -30,6 +30,9 @@ export default function initialiseFirebase() {
 
     console.log(itemArray);
 
-    // store.dispatch(actions.populateMeals(items));
+    store.dispatch({
+      type: 'POPULATE_LIST',
+      data: itemArray
+    });
   });
 }

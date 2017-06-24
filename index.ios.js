@@ -1,21 +1,22 @@
 import React, { Component } from 'react';
 import { AppRegistry } from 'react-native';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
 
-import AppReducer from './src/reducers';
+import store from './src/reducers';
 import AppWithNavigationState from './src/navigators/appNavigator';
 
 import initialiseFirebase from './config/firebase';
 
 initialiseFirebase();
 
+// // creating the store with the combined reducers. Store is used throughout the app via dispatches
+// const store = createStore(AppReducer);
+
 class artic extends Component {
-  store = createStore(AppReducer);
 
   render() {
     return (
-      <Provider store={this.store}>
+      <Provider store={store}>
         <AppWithNavigationState />
       </Provider>
     );

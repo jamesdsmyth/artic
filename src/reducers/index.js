@@ -1,6 +1,5 @@
-import { combineReducers } from 'redux';
+import { combineReducers, createStore } from 'redux';
 import { NavigationActions } from 'react-navigation';
-
 import { AppNavigator } from '../navigators/appNavigator';
 
 // Start with two routes: The Main screen, with the Login screen on top.
@@ -51,9 +50,26 @@ function auth(state = initialAuthState, action) {
   }
 }
 
+function populateList(state = {}, action = {}) {
+  switch(action.type) {
+    case 'POPULATE_LIST':
+      const newState = Object.assign({}, state, action.data);
+
+      console.log(newState);
+      return newState;
+
+      default:
+        return state;
+    }
+}
+
 const AppReducer = combineReducers({
   nav,
   auth,
+  populateList
 });
 
-export default AppReducer;
+// creating the store with the combined reducers. Store is used throughout the app via dispatches
+const store = createStore(AppReducer);
+
+export default store;
