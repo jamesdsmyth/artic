@@ -51,16 +51,18 @@ function auth(state = initialAuthState, action) {
 }
 
 function populateList(state = {}, action = {}) {
+  let newState = null;
+
   switch(action.type) {
     case 'POPULATE_LIST':
-      const newState = Object.assign({}, state, action.data);
-
-      console.log(newState);
-      return newState;
+      newState = Object.assign({}, state, action.data);
 
       default:
-        return state;
     }
+
+  console.log(newState);
+  // Simply return the original `state` if `nextState` is null or undefined.
+  return newState || state;
 }
 
 const AppReducer = combineReducers({
@@ -70,6 +72,6 @@ const AppReducer = combineReducers({
 });
 
 // creating the store with the combined reducers. Store is used throughout the app via dispatches
-const store = createStore(AppReducer);
+export default store = createStore(AppReducer);
 
-export default store;
+// export default store;

@@ -28,6 +28,11 @@ class ArticLanding extends Component {
     showIcon: true
   }
 
+  componentWillReceiveProps(nextProps) {
+    console.log(nextProps);
+    this.props = nextProps;
+  }
+
   render() {
     console.log(this.props);
     const items = ['Simon Mignolet','Nathaniel Clyne','Dejan Lovren','Mama Sakho','Emre Can'];
