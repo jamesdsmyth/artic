@@ -4,19 +4,43 @@ import {
   ListItem,
   Left,
   Body,
-  Text
+  Text,
+  Card,
+  CardItem,
+  Thumbnail,
+  Icon,
+  Button
 } from 'native-base';
+
+import stylesArtic from '../styles/styles';
 
 const ListItemArtic = ({ item }) => (
   <ListItem>
-    <Left>
-      <Image source={require('../images/cat.jpg')} />
-      <Body>
-        <Text>NativeBase</Text>
-        <Text note>GeekyAnts</Text>
-      </Body>
-    </Left>
-    <Text>{item}</Text>
+    <Card >
+      <CardItem>
+        <Left>
+          <Thumbnail source={require('../images/cat.jpg')} />
+          <Body>
+            <Text>Aliya MUA</Text>
+            <Text note>Dubai</Text>
+          </Body>
+        </Left>
+      </CardItem>
+      <CardItem cardBody>
+        <Image style={stylesArtic.listItemArtic.imageArtic} source={require('../images/cat.jpg')}/>
+      </CardItem>
+      <CardItem>
+        <Button transparent>
+          <Icon active name="thumbs-up" />
+          <Text>12 Likes</Text>
+        </Button>
+        <Button transparent>
+          <Icon active name="chatbubbles" />
+          <Text>4 Comments</Text>
+        </Button>
+        <Text>11h ago</Text>
+      </CardItem>
+    </Card>
   </ListItem>
 )
 
