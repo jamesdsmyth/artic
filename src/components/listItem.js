@@ -14,8 +14,8 @@ import {
 
 import stylesArtic from '../styles/styles';
 
-const ListItemArtic = ({ item }) => (
-  <ListItem onPress={() => alert('clicked')}>
+const ListItemArtic = ({ item, navigate }) => (
+  <ListItem onPress={() => navigate('ListItem', {name: item.name})}>
     <Card >
       <CardItem>
         <Left>
@@ -27,9 +27,7 @@ const ListItemArtic = ({ item }) => (
         </Left>
       </CardItem>
       <CardItem cardBody>
-        
-          <Image style={stylesArtic.listItemArtic.imageArtic} source={{uri: item.photo}} />
-        
+        <Image style={stylesArtic.listItemArtic.imageArtic} source={{uri: item.photo}} />
       </CardItem>
       <CardItem>
         <TouchableHighlight>

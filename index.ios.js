@@ -9,9 +9,6 @@ import initialiseFirebase from './config/firebase';
 
 initialiseFirebase();
 
-// // creating the store with the combined reducers. Store is used throughout the app via dispatches
-// const store = createStore(AppReducer);
-
 class artic extends Component {
 
   render() {

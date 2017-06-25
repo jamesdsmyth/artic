@@ -27,6 +27,8 @@ class ArticLanding extends Component {
   }
 
   render() {
+    const {navigate} = this.props.navigation;
+
     let list = [];
 
     for(var key in this.props.listItems) {
@@ -38,7 +40,7 @@ class ArticLanding extends Component {
         <HeaderArtic title="Artic" />
         <Content>
           <List dataArray={list} renderRow={(item) =>
-            <ListItemArtic item={item} />
+            <ListItemArtic item={item} navigate={navigate} />
           }>
           </List>
         </Content>

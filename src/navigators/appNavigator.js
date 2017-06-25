@@ -1,14 +1,31 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { addNavigationHelpers, TabNavigator } from 'react-navigation';
+import { addNavigationHelpers, TabNavigator, StackNavigator } from 'react-navigation';
 
 import ArticLanding from '../scenes/landing';
 import ArticMessages from '../scenes/messages';
+import ArticSingle from '../scenes/single';
 
-export const AppNavigator = TabNavigator({
+
+// Home is the landing list of items and ListItem is clicking through
+// on one of the list items. 
+export const ListStack = StackNavigator({
   Home: {
     screen: ArticLanding
+  },
+  ListItem: {
+    screen: ArticSingle,
+    navigationOptions: ({ navigation }) => ({
+      title: 'Users profile',
+    }),
+  }
+});
+
+// tab navigation
+export const AppNavigator = TabNavigator({
+  Home: {
+    screen: ListStack
   },
   Messages: {
     screen: ArticMessages
