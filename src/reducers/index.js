@@ -50,25 +50,23 @@ function auth(state = initialAuthState, action) {
   }
 }
 
-function populateList(state = {}, action = {}) {
+function listItems(state = {}, action = {}) {
   let newState = null;
 
   switch(action.type) {
     case 'POPULATE_LIST':
       newState = Object.assign({}, state, action.data);
-
-      default:
     }
 
   console.log(newState);
-  // Simply return the original `state` if `nextState` is null or undefined.
+  // Simply return the original 'state' if 'nextState' is null or undefined.
   return newState || state;
 }
 
 const AppReducer = combineReducers({
   nav,
   auth,
-  populateList
+  listItems
 });
 
 // creating the store with the combined reducers. Store is used throughout the app via dispatches

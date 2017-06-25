@@ -28,8 +28,6 @@ export default function initialiseFirebase() {
       itemArray.push(arrayItem);
     }
 
-    console.log(itemArray);
-
     store.dispatch({
       type: 'POPULATE_LIST',
       data: itemArray

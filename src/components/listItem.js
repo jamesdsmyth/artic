@@ -1,5 +1,5 @@
 import React, { Dimensions } from 'react';
-import { Image, StyleSheet } from 'react-native';
+import { Image, StyleSheet, TouchableHighlight } from 'react-native';
 import {
   ListItem,
   Left,
@@ -15,22 +15,26 @@ import {
 import stylesArtic from '../styles/styles';
 
 const ListItemArtic = ({ item }) => (
-  <ListItem>
+  <ListItem onPress={() => alert('clicked')}>
     <Card >
       <CardItem>
         <Left>
-          <Thumbnail source={require('../images/cat.jpg')} />
+          <Thumbnail source={{uri: item.photo}} />
           <Body>
-            <Text>Aliya MUA</Text>
-            <Text note>Dubai</Text>
+            <Text>{item.name}</Text>
+            <Text note>{item.region}, {item.country}</Text>
           </Body>
         </Left>
       </CardItem>
       <CardItem cardBody>
-        <Image style={stylesArtic.listItemArtic.imageArtic} source={require('../images/cat.jpg')}/>
+        
+          <Image style={stylesArtic.listItemArtic.imageArtic} source={{uri: item.photo}} />
+        
       </CardItem>
       <CardItem>
-        <Text note>Arab / Asian / Western</Text>
+        <TouchableHighlight>
+        <Text note>{item.type}</Text>
+        </TouchableHighlight>
       </CardItem>
     </Card>
   </ListItem>

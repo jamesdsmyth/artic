@@ -16,8 +16,6 @@ class ArticLanding extends Component {
 
   constructor(props) {
     super(props)
-    // this.createRows = this.createRows.bind(this);
-    console.log(props);
   }
 
   static navigationOptions = {
@@ -28,20 +26,18 @@ class ArticLanding extends Component {
     showIcon: true
   }
 
-  componentWillReceiveProps(nextProps) {
-    console.log(nextProps);
-    this.props = nextProps;
-  }
-
   render() {
-    console.log(this.props);
-    const items = ['Simon Mignolet','Nathaniel Clyne','Dejan Lovren','Mama Sakho','Emre Can'];
+    let list = [];
+
+    for(var key in this.props.listItems) {
+      list.push(this.props.listItems[key]);
+    }
 
     return (
       <Container>
         <HeaderArtic title="Artic" />
         <Content>
-          <List dataArray={items} renderRow={(item) =>
+          <List dataArray={list} renderRow={(item) =>
             <ListItemArtic item={item} />
           }>
           </List>
@@ -52,7 +48,7 @@ class ArticLanding extends Component {
 }
 
 function mapStateToProps(state) {
-  return { users: state.users }
+  return { listItems: state.listItems }
 }
 
 export default connect(mapStateToProps)(ArticLanding);
