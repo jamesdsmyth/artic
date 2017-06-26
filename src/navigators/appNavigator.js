@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { Icon } from 'native-base';
 import { addNavigationHelpers, TabNavigator, StackNavigator } from 'react-navigation';
 
 import ArticLanding from '../scenes/landing';
@@ -12,23 +13,41 @@ import ArticSingle from '../scenes/single';
 // on one of the list items. 
 export const ListStack = StackNavigator({
   Home: {
-    screen: ArticLanding
+    screen: ArticLanding,
+    navigationOptions: {
+      tabBarIcon: () => (
+        <Icon name='home' />
+      ),
+      showLabel: false,
+      showIcon: true
+    }
   },
   ListItem: {
     screen: ArticSingle,
-    navigationOptions: ({ navigation }) => ({
-      title: 'Users profile',
-    }),
+    navigationOptions: {
+      title: 'User we just clicked on'
+    }
   }
 });
 
 // tab navigation
 export const AppNavigator = TabNavigator({
   Home: {
-    screen: ListStack
+    screen: ListStack,
+    navigationOptions: {
+      tabBarLabel: 'Home'//,
+      // tabBarIcon: ({ tintColor }) => <Icon name="list" size={35} color={tintColor} />
+    },
   },
   Messages: {
-    screen: ArticMessages
+    screen: ArticMessages,
+    navigationOptions: {
+      tabBarIcon: ({ tintColor }) => (
+        <Icon name='chatbubbles' />
+      ),
+      showLabel: false,
+      showIcon: true
+    }
   }
 });
 
@@ -50,7 +69,7 @@ AppWithNavigationState.propTypes = {
 };
 
 const mapStateToProps = state => ({
-  nav: state.nav,
+  nav: state.navReducer
 });
 
 export default connect(mapStateToProps)(AppWithNavigationState);

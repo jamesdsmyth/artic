@@ -13,31 +13,10 @@ import {
 import HeaderArtic from '../components/header';
 import ListItemArtic from '../components/listItem'
 
-class ArticSingle extends Component {
+const ArticSingle = () => (
+  <Container>
+    <Text>single</Text>
+  </Container>
+);
 
-  constructor(props) {
-    super(props)
-  }
-
-  // static navigationOptions = {
-  //   tabBarIcon: () => (
-  //     <Icon name='home' />
-  //   ),
-  //   showLabel: false,
-  //   showIcon: true
-  // }
-
-  render() {
-    return (
-      <Container>
-        <Text>single</Text>
-      </Container>
-    )
-  }
-}
-
-function mapStateToProps(state) {
-  return { listItems: state.listItems }
-}
-
-export default connect(mapStateToProps)(ArticSingle);
+export default ArticSingle;

@@ -18,17 +18,8 @@ class ArticLanding extends Component {
     super(props)
   }
 
-  static navigationOptions = {
-    tabBarIcon: () => (
-      <Icon name='home' />
-    ),
-    showLabel: false,
-    showIcon: true
-  }
-
   render() {
     const {navigate} = this.props.navigation;
-
     let list = [];
 
     for(var key in this.props.listItems) {
