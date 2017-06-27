@@ -25,7 +25,12 @@ export const ListStack = StackNavigator({
   ListItem: {
     screen: ArticSingle,
     navigationOptions: {
-      title: 'User we just clicked on'
+      title: 'User we just clicked on',
+      tabBarIcon: () => (
+        <Icon name='home' />
+      ),
+      showLabel: false,
+      showIcon: true
     }
   }
 });
@@ -35,9 +40,8 @@ export const AppNavigator = TabNavigator({
   Home: {
     screen: ListStack,
     navigationOptions: {
-      tabBarLabel: 'Home'//,
-      // tabBarIcon: ({ tintColor }) => <Icon name="list" size={35} color={tintColor} />
-    },
+      tabBarLabel: 'Home'
+    }
   },
   Messages: {
     screen: ArticMessages,
