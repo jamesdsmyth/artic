@@ -10,20 +10,32 @@ import {
   Text
 } from 'native-base';
 
-import HeaderArtic from '../components/header';
+import stylesArtic from '../styles/styles';
 
 class ArticSingle extends Component {
-
   constructor(props) {
     super(props);
+    console.log(props.navigation.state.params);
   }
+
+  // setting the dynamic title of the page using the navigationOptions and passing the navigation which contains the state
+  static navigationOptions = ({ navigation }) => ({
+      title: navigation.state.params.name
+  });
 
   render() {
     const item = this.props.navigation.state.params;
 
     return (
     <Container>
-      <Text>{item.about}</Text>
+      <Content>
+        <Image style={stylesArtic.listItemArtic.imageArtic} source={{uri: item.photo}} />
+        <Text>{item.about}</Text>
+        <Text>{item.region}</Text>
+        <Text>{item.country}</Text>
+        <Text>{item.type}</Text>
+        <Text>...now need to add the thumbnails with click throughs to the actual image</Text>
+      </Content>
     </Container>
     )
   }

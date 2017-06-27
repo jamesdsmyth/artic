@@ -25,7 +25,6 @@ export const ListStack = StackNavigator({
   Single: {
     screen: ArticSingle,
     navigationOptions: {
-      title: 'User we just clicked on',
       tabBarIcon: () => (
         <Icon name='home' />
       ),

@@ -1,4 +1,5 @@
 const stylesArtic = {
+  // landing page list
   listItemArtic: {
     "imageArtic": {
       flex: 1,
@@ -6,6 +7,15 @@ const stylesArtic = {
       alignSelf: 'stretch'
     }
   },
+  // landing page list item 
+  singleArtic: {
+    "imageArtic": {
+      flex: 1,
+      height: 400,
+      alignSelf: 'stretch'
+    }
+  },
+  // global header
   headerArtic: {
     backgroundColor: '#a8d9ff',
     height: 60
