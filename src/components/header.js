@@ -6,15 +6,15 @@ import {
   Title
 } from 'native-base';
 
-import stylesArtic from '../styles/styles';
+import ArticStyles from '../styles/styles';
 
-class HeaderArtic extends Component {
+class ArticHeader extends Component {
   render() {
     const styles = this.props.style;
     const title = this.props.title;
 
     return (
-      <Header style={stylesArtic.headerArtic}>
+      <Header style={ArticStyles.header}>
         <Body>
           <Title>{title}</Title>
         </Body>
@@ -24,4 +24,4 @@ class HeaderArtic extends Component {
 }
 
 // connect the component to the theme
-export default connectStyle('artic.CustomComponent', stylesArtic)(HeaderArtic);
+export default connectStyle('artic.CustomComponent', ArticStyles)(ArticHeader);

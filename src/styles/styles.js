@@ -1,23 +1,23 @@
 const Dimensions = require('Dimensions');
 const window = Dimensions.get('window');
 
-const stylesArtic = {
+const ArticStyles = {
   // landing page list
-  listItemArtic: {
-    'imageArtic': {
+  listItem: {
+    'image': {
       flex: 1,
       height: 300,
       alignSelf: 'stretch'
     }
   },
   // landing page list item 
-  singleArtic: {
-    'imageArtic': {
+  single: {
+    'image': {
       flex: 1,
       height: 400,
       alignSelf: 'stretch'
     },
-    'thumbnailImageArtic': {
+    'thumbnailImage': {
       flex: 1,
       width: (window.width / 2),
       height: 200,
@@ -27,10 +27,10 @@ const stylesArtic = {
     }
   },
   // global header
-  headerArtic: {
+  header: {
     backgroundColor: '#a8d9ff',
     height: 60
   }
 }
 
-export default stylesArtic;
+export default ArticStyles;

@@ -1,4 +1,4 @@
-import React, { Dimensions } from 'react';
+import React from 'react';
 import { Image, StyleSheet, TouchableHighlight } from 'react-native';
 import {
   ListItem,
@@ -12,9 +12,9 @@ import {
   Button
 } from 'native-base';
 
-import stylesArtic from '../styles/styles';
+import ArticStyles from '../styles/styles';
 
-const ListItemArtic = ({ item, navigate }) => (
+const ArticListItem = ({ item, navigate }) => (
   <ListItem onPress={() => navigate('Single', item)}>
     <Card >
       <CardItem>
@@ -27,7 +27,7 @@ const ListItemArtic = ({ item, navigate }) => (
         </Left>
       </CardItem>
       <CardItem cardBody>
-        <Image style={stylesArtic.listItemArtic.imageArtic} source={{uri: item.photo}} />
+        <Image style={ArticStyles.listItem.image} source={{uri: item.photo}} />
       </CardItem>
       <CardItem>
         <TouchableHighlight>
@@ -38,4 +38,4 @@ const ListItemArtic = ({ item, navigate }) => (
   </ListItem>
 )
 
-export default ListItemArtic;
+export default ArticListItem;

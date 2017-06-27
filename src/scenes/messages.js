@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
-import HeaderArtic from '../components/header';
+import ArticHeader from '../components/header';
 
 export default class ArticMessages extends Component {
 
   render() {
     return (
-      <HeaderArtic title="Messages" />
+      <ArticHeader title="Messages" />
     )
   }
 }

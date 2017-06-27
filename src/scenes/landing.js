@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
-import { Image, StyleSheet } from 'react-native';
+import { Image, FlatList, StyleSheet } from 'react-native';
 import { connect } from 'react-redux';
 import {
   StyleProvider,
   Container,
   Content,
-  Icon,
-  List
+  Icon
 } from 'native-base';
 
-import HeaderArtic from '../components/header';
-import ListItemArtic from '../components/listItem'
+import ArticHeader from '../components/header';
+import ArticListItem from '../components/listItem'
 
 class ArticLanding extends Component {
 
@@ -19,7 +18,7 @@ class ArticLanding extends Component {
   }
 
   render() {
-    const {navigate} = this.props.navigation;
+    const { navigate } = this.props.navigation;
     let list = [];
 
     for(var key in this.props.listItems) {
@@ -28,12 +27,11 @@ class ArticLanding extends Component {
 
     return (
       <Container>
-        <HeaderArtic title="Artic" />
+        <ArticHeader title="Artic" />
         <Content>
-          <List dataArray={list} renderRow={(item) =>
-            <ListItemArtic item={item} navigate={navigate} />
-          }>
-          </List>
+          <FlatList data={list}
+            renderItem={({item}) => <ArticListItem item={item} navigate={navigate} />}
+          />
         </Content>
       </Container>
     )

@@ -7,6 +7,7 @@ import { addNavigationHelpers, TabNavigator, StackNavigator } from 'react-naviga
 import ArticLanding from '../scenes/landing';
 import ArticMessages from '../scenes/messages';
 import ArticSingle from '../scenes/single';
+import ArticImage from '../scenes/image';
 
 
 // Home is the landing list of items and ListItem is clicking through
@@ -24,6 +25,16 @@ export const ListStack = StackNavigator({
   },
   Single: {
     screen: ArticSingle,
+    navigationOptions: {
+      tabBarIcon: () => (
+        <Icon name='home' />
+      ),
+      showLabel: false,
+      showIcon: true
+    }
+  },
+  Image: {
+    screen: ArticImage,
     navigationOptions: {
       tabBarIcon: () => (
         <Icon name='home' />
