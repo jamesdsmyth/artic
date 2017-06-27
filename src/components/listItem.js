@@ -15,7 +15,7 @@ import {
 import stylesArtic from '../styles/styles';
 
 const ListItemArtic = ({ item, navigate }) => (
-  <ListItem onPress={() => navigate('ListItem', {name: item.name})}>
+  <ListItem onPress={() => navigate('Single', item)}>
     <Card >
       <CardItem>
         <Left>

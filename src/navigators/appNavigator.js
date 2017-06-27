@@ -22,7 +22,7 @@ export const ListStack = StackNavigator({
       showIcon: true
     }
   },
-  ListItem: {
+  Single: {
     screen: ArticSingle,
     navigationOptions: {
       title: 'User we just clicked on',
