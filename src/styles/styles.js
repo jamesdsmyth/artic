@@ -1,7 +1,10 @@
+const Dimensions = require('Dimensions');
+const window = Dimensions.get('window');
+
 const stylesArtic = {
   // landing page list
   listItemArtic: {
-    "imageArtic": {
+    'imageArtic': {
       flex: 1,
       height: 300,
       alignSelf: 'stretch'
@@ -9,10 +12,18 @@ const stylesArtic = {
   },
   // landing page list item 
   singleArtic: {
-    "imageArtic": {
+    'imageArtic': {
       flex: 1,
       height: 400,
       alignSelf: 'stretch'
+    },
+    'thumbnailImageArtic': {
+      flex: 1,
+      width: (window.width / 2),
+      height: 200,
+      alignSelf: 'stretch',
+      flexDirection: 'row',
+      flexWrap: 'wrap'
     }
   },
   // global header
