@@ -17,13 +17,16 @@ const ArticStyles = {
       height: 400,
       alignSelf: 'stretch'
     },
-    'thumbnailImage': {
+    'thumbnailList': {
       flex: 1,
+      width: window.width,
+      justifyContent: 'flex-start',
+      height: window.height,
+      alignItems: 'flex-end'
+    },
+    'thumbnailImage': {
       width: (window.width / 2),
-      height: 200,
-      alignSelf: 'stretch',
-      flexDirection: 'row',
-      flexWrap: 'wrap'
+      height: 200
     }
   },
   // global header

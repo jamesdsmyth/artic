@@ -20,11 +20,14 @@ export default function initialiseFirebase() {
   itemsRef = firebaseApp.database().ref('users');
 
   itemsRef.on('value', (snapshot) => {
+
     let newSnapshot = snapshot.val() || [];
     let itemArray = [];
+    let keyValue = 0;
 
     for (item in newSnapshot) {
       let arrayItem = newSnapshot[item];
+      arrayItem.key = keyValue + 1;
       itemArray.push(arrayItem);
     }
 

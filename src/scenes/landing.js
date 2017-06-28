@@ -21,7 +21,7 @@ class ArticLanding extends Component {
     const { navigate } = this.props.navigation;
     let list = [];
 
-    for(var key in this.props.listItems) {
+    for(let key in this.props.listItems) {
       list.push(this.props.listItems[key]);
     }
 
