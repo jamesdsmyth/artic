@@ -17,6 +17,11 @@ class ArticLanding extends Component {
     super(props)
   }
 
+  // setting the dynamic title of the page using the navigationOptions and passing the navigation which contains the state
+  static navigationOptions = ({ navigation }) => ({
+      title: 'MUA List'
+  });
+
   render() {
     const { navigate } = this.props.navigation;
     let list = [];
@@ -27,7 +32,7 @@ class ArticLanding extends Component {
 
     return (
       <Container>
-        <ArticHeader title="Artic" />
+        {/*<ArticHeader title="Artic" />*/}
         <Content>
           <FlatList data={list}
             renderItem={({item}) => <ArticListItem item={item} navigate={navigate} />}

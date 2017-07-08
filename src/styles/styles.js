@@ -6,7 +6,7 @@ const ArticStyles = {
   },
   // landing page list
   listItem: {
-    'image': {
+    image: {
       flex: 1,
       height: 300,
       alignSelf: 'stretch'
@@ -14,28 +14,32 @@ const ArticStyles = {
   },
   // landing page list item
   single: {
-    'content': {
+    content: {
       backgroundColor: '#ffffff',
     },
-    'header': {
+    header: {
       height: 300
     },
-    'image': {
+    image: {
       flex: 1,
     },
-    'textBlock': {
+    textBlock: {
       paddingTop: '3%',
       paddingRight: '1%',
       paddingBottom: '3%',
-      paddingLeft: '1%'
+      paddingLeft: '1%',
+
+      location: {
+        color: '#cccccc'
+      }
     },
-    'thumbnailList': {
-      height: 600,
+    thumbnailList: {
+      height: 1200,
       flexDirection: 'row'
     },
-    'thumbnailImage': {
-      height: 200,
-      width: window.width / 2
+    thumbnailImage: {
+      height: window.width,
+      width: window.width
     }
   },
   // global header
