@@ -39,7 +39,7 @@ class ArticSingle extends Component {
           <Image style={ArticStyles.single.image} source={{uri: item.photo}} />
         </View>
         <View style={ArticStyles.single.textBlock}>
-          <Text>{item.type}</Text>
+          <Text style={ArticStyles.single.textBlock.type}>{item.type}</Text>
           <Text style={ArticStyles.single.textBlock.location}>{item.region}, {item.country}</Text>
           <Text>{item.about}</Text>    
         </View>

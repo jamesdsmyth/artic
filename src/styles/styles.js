@@ -2,8 +2,6 @@ const Dimensions = require('Dimensions');
 const window = Dimensions.get('window');
 
 const ArticStyles = {
-  container: {
-  },
   // landing page list
   listItem: {
     image: {
@@ -25,12 +23,17 @@ const ArticStyles = {
     },
     textBlock: {
       paddingTop: '3%',
-      paddingRight: '1%',
+      paddingRight: '2%',
       paddingBottom: '3%',
-      paddingLeft: '1%',
-
+      paddingLeft: '2%',
+      type: {
+        color: '#cccccc',
+        textAlign: 'center'
+      },
       location: {
-        color: '#cccccc'
+        color: '#cccccc',
+        textAlign: 'center',
+        marginBottom: '3%'
       }
     },
     thumbnailList: {
