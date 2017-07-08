@@ -2,6 +2,8 @@ const Dimensions = require('Dimensions');
 const window = Dimensions.get('window');
 
 const ArticStyles = {
+  container: {
+  },
   // landing page list
   listItem: {
     'image': {
@@ -10,22 +12,21 @@ const ArticStyles = {
       alignSelf: 'stretch'
     }
   },
-  // landing page list item 
+  // landing page list item
   single: {
+    'header': {
+      flex: 1/2,
+    },
     'image': {
       flex: 1,
-      height: 400,
-      alignSelf: 'stretch'
     },
     'thumbnailList': {
       flex: 1,
-      width: window.width,
-      justifyContent: 'flex-start',
-      height: window.height,
-      alignItems: 'flex-end'
+      flexDirection: 'row',
+      flexWrap: 'nowrap',
+      alignItems: 'flex-start'
     },
     'thumbnailImage': {
-      width: (window.width / 2),
       height: 200
     }
   },

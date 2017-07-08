@@ -3,6 +3,7 @@ import { Image, FlatList, StyleSheet } from 'react-native';
 import { connect } from 'react-redux';
 import {
   StyleProvider,
+  Card,
   Container,
   Content,
   Icon,
@@ -26,22 +27,25 @@ class ArticSingle extends Component {
   render() {
     const item = this.props.navigation.state.params;
     const { navigate } = this.props.navigation;
-    let  keyValue = 10;
+    
     // to be replaced with dynamic list
     let list = ['https://s-media-cache-ak0.pinimg.com/736x/99/90/87/99908725ec2c551b7187c68d5b7644a3.jpg', 'https://s-media-cache-ak0.pinimg.com/736x/2e/33/79/2e3379baf891c5914b79bf2feea8725b.jpg', 'https://s-media-cache-ak0.pinimg.com/736x/8e/96/de/8e96de5625ecebd2a0c71ed8269511d5.jpg'];
     // to be replaced with dynamic list
 
     return (
-    <Container>
+    <Container style={ArticStyles.container}>
       <Content>
-        <Image style={ArticStyles.single.image} source={{uri: item.photo}} />
+        <Card style={ArticStyles.single.header}>
+          <Image style={ArticStyles.single.image} source={{uri: item.photo}} />
+        </Card>
         <Text>{item.about}</Text>
         <Text>{item.region}</Text>
         <Text>{item.country}</Text>
         <Text>{item.type}</Text>
         <FlatList data={list}
+          key={"flatlistexample"}
           style={ArticStyles.thumbnailList}
-          renderItem={({item}) => <ArticThumbnail image={item} keyValue={keyValue + 1} navigate={navigate} />}
+          renderItem={({item}) => <ArticThumbnail image={item} navigate={navigate} />}
         />
         <Text>...now need to add the thumbnails with click throughs to the actual image</Text>
       </Content>

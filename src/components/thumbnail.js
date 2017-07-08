@@ -3,12 +3,12 @@ import { Image } from 'react-native';
 
 import ArticStyles from '../styles/styles';
 
-const ArticThumbnail = ({ image, keyValue, navigate }) => (
+const ArticThumbnail = ({ image, navigate }) => (
   <Image 
     style={ArticStyles.single.thumbnailImage} 
-    key={keyValue} 
-    source={{uri: image}} 
-    onPress={() => navigate('Image', image)} 
+    key={image} 
+    source={{uri: image}}
+    onPress={() => alert('clicked')}
   />
 )
 
