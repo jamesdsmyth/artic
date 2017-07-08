@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Image, FlatList, StyleSheet } from 'react-native';
+import { Image, FlatList, View, StyleSheet } from 'react-native';
 import { connect } from 'react-redux';
 import {
   StyleProvider,
@@ -34,20 +34,22 @@ class ArticSingle extends Component {
 
     return (
     <Container style={ArticStyles.container}>
-      <Content>
-        <Card style={ArticStyles.single.header}>
+      <Content style={ArticStyles.single.content}>
+        <View style={ArticStyles.single.header}>
           <Image style={ArticStyles.single.image} source={{uri: item.photo}} />
-        </Card>
-        <Text>{item.about}</Text>
-        <Text>{item.region}</Text>
-        <Text>{item.country}</Text>
-        <Text>{item.type}</Text>
-        <FlatList data={list}
+        </View>
+        <View style={ArticStyles.single.textBlock}>
+          <Text>{item.about}</Text>
+          <Text>{item.region}</Text>
+          <Text>{item.country}</Text>
+          <Text>{item.type}</Text>
+        </View>
+        <FlatList 
+          style={ArticStyles.single.thumbnailList} 
+          data={list}
           key={"flatlistexample"}
-          style={ArticStyles.thumbnailList}
           renderItem={({item}) => <ArticThumbnail image={item} navigate={navigate} />}
         />
-        <Text>...now need to add the thumbnails with click throughs to the actual image</Text>
       </Content>
     </Container>
     )

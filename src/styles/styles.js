@@ -14,20 +14,28 @@ const ArticStyles = {
   },
   // landing page list item
   single: {
+    'content': {
+      backgroundColor: '#ffffff',
+    },
     'header': {
-      flex: 1/2,
+      height: 300
     },
     'image': {
       flex: 1,
     },
+    'textBlock': {
+      paddingTop: '3%',
+      paddingRight: '1%',
+      paddingBottom: '3%',
+      paddingLeft: '1%'
+    },
     'thumbnailList': {
-      flex: 1,
-      flexDirection: 'row',
-      flexWrap: 'nowrap',
-      alignItems: 'flex-start'
+      height: 600,
+      flexDirection: 'row'
     },
     'thumbnailImage': {
-      height: 200
+      height: 200,
+      width: window.width / 2
     }
   },
   // global header
